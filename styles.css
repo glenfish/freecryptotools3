@@ -1,69 +1,92 @@
 html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana,
-          Helvetica, sans-serif;
-      }
-      input[type="email"] {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 10px;
-        width: 200px;
-        max-width: 90% !important;
-      }
-      svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-      h1 {
-        padding-top:10px;
-        font-size: 4em;
-        font-weight: normal;
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
-      }
-      #getWaitlistContainer {
-        /* If specific styling for #getWaitlistContainer is needed, add here */
-        width: 100%;
-        max-width: 355px; /* Adjust based on your content's width */
-        position: relative;
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically by default */
+  align-items: center;
+  text-align: center;
+  font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+
+
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  width: 200px;
+  max-width: 90% !important;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+h1 {
+  padding-top: 0px;
+  font-size: 4em;
+  font-weight: normal;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff; /* White glow */
+  margin: 5px auto;
+}
+
+#getWaitlistContainer {
+  width: 100%;
+  max-width: 355px; /* Adjust based on your content's width */
+  position: relative;
+  left: 0px;
+  /* border: 10px solid white; */
+  max-width: 100vw !important;
+  top:60px;
+}
+
+.subheader {
+  font-size: 32px;
+  line-height: 58px !important;
+  display: block;
+  margin-top: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.credit {
+  font-size: 10px;
+  color: white;
+  position: relative;
+  top: 50px;
+}
+
+p {
+  font-size: 22px;
+  line-height: 38px;
+  margin-top: 20px;
+  margin-bottom: 20px;    
+  max-width: 600px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    html, body {
+      justify-content: flex-start; /* Align content to the top on mobile */
+  
+    }
+    #getWaitlistContainer {
+
         left: -28px;
-        /* border: 10px solid white; */
-        max-width: 100vw!important;
+
       }
-      .subheader {
-        font-size: 32px;
-        line-height: 58px !important;
-        display: block;
-        margin-top: 10px;
-      }
-      .hide {
-        display: none;
-      }
-      .credit {
-        font-size: 10px;
-        color: white;
-        position: relative;
-        top:50px;
-      }
-      p {
-        font-size: 22px;
-        line-height: 38px;
-        margin-top: 20px;
-        margin-bottom: 20px;    
-        max-width:600px;
-      }
-      .bold {
-        font-weight: bold;
-      }
+  }
