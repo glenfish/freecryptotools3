@@ -1,0 +1,68 @@
+html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana,
+          Helvetica, sans-serif;
+      }
+      input[type="email"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+        width: 200px;
+        max-width: 90% !important;
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      h1 {
+        font-size: 4em;
+        font-weight: normal;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+      }
+      #getWaitlistContainer {
+        /* If specific styling for #getWaitlistContainer is needed, add here */
+        width: 100%;
+        max-width: 444px; /* Adjust based on your content's width */
+        position: relative;
+        left: -10px;
+        border: 10px solid white;
+      }
+      .subheader {
+        font-size: 32px;
+        line-height: 58px !important;
+        display: block;
+        margin-top: 20px;
+      }
+      .hide {
+        display: none;
+      }
+      .credit {
+        font-size: 10px;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      p {
+        font-size: 22px;
+        line-height: 38px;
+        margin-top: 20px;
+        margin-bottom: 20px;    
+        max-width:600px;
+      }
+      .bold {
+        font-weight: bold;
+      }
