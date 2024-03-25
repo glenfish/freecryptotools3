@@ -9,6 +9,7 @@ body {
   align-items: center;
   text-align: center;
   font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+  min-width: 365px!important;
 }
 
 
@@ -79,6 +80,17 @@ p {
   font-weight: bold;
 }
 
+.attrib {
+  font-size: 10px;
+  color: white;
+  position: relative;
+  top: 250px;
+
+}
+input[name="email"] {
+  text-align:center;
+}
+
 @media (max-width: 768px) {
     html, body {
       justify-content: flex-start; /* Align content to the top on mobile */
@@ -86,7 +98,7 @@ p {
     }
     #getWaitlistContainer {
 
-        left: -28px;
+        /* left: -28px; */
 
       }
   }

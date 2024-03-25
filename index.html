@@ -30,7 +30,6 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const widgetContainer = document.getElementById("getWaitlistContainer");
-
         const observer = new MutationObserver(function (mutations) {
           mutations.forEach(function (mutation) {
             if (mutation.addedNodes.length) {
@@ -38,41 +37,54 @@
                 if (node.nodeType === Node.ELEMENT_NODE) {
                   // Remove specific elements as before
                   if (node.textContent.includes("Widget by getwaitlist.com")) {
-                    node.parentNode.removeChild(node);
+                    // node.parentNode.removeChild(node);
+                    node.style.marginTop = "50px";
                   }
                   if (node.nodeName === "SVG") {
-                    node.parentNode.removeChild(node);
+                    // node.parentNode.removeChild(node);
                   }
-
                   // Additional tasks: Resize and focus the email input field
                   const emailInput = widgetContainer.querySelector(
                     'input[name="email"]'
                   );
                   if (emailInput) {
-                    emailInput.style.width = "360px"; // Resize the input field
-                    emailInput.focus(); // Focus on the input field
+                    const parentDiv = emailInput.parentNode;
+                    const parentParentDiv = parentDiv.parentNode;
+                    parentDiv.className = "";
+                    parentParentDiv.className = "";
+                    parentDiv.style.width = "100%";
+                    parentDiv.style.marginBottom = "10px";
+                    parentParentDiv.style.margin = "auto";
+                    parentParentDiv.style.width = "100%";
+                    parentParentDiv.style.maxWidth = "460px";
+                    parentParentDiv.style.textAlign = "center";
+                    emailInput.className = "";
+                    emailInput.style.fontSize = "22px";
+                    emailInput.style.lineHeight = "30px;";
+                    emailInput.style.margin = "auto";
+                    emailInput.style.width = "90%";
+                    emailInput.style.border = "1px solid gray";
+                    emailInput.style.borderRadius = "4px";
+                    emailInput.style.height = "40px";
+                    emailInput.style.minWidth = "280px";
+                    emailInput.style.maxWidth = "460px";
+                    emailInput.placeholder = "Enter your email";
+                    emailInput.focus();
                   }
                 }
               });
             }
           });
         });
-
         const config = { childList: true, subtree: true };
         observer.observe(widgetContainer, config);
-
         // Optional: disconnect the observer after a timeout to clean up
         setTimeout(() => {
           observer.disconnect();
         }, 10000); // Adjust the timeout duration as needed
       });
     </script>
-    <a
-      class="credit"
-      rel="nofollow"
-      href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/"
-      >Free SVG Backgrounds and Patterns by SVGBackgrounds.com</a
-    >
+
     <svg xmlns="http://www.w3.org/2000/svg" width="100%">
       <defs>
         <linearGradient
@@ -172,5 +184,13 @@
       <rect x="0" y="0" fill="url(#a)" width="100%" height="100%" />
       <rect x="0" y="0" fill="url(#b)" width="100%" height="100%" />
     </svg>
+    <div class="attrib">
+      <a
+        class="credit"
+        rel="nofollow"
+        href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/"
+        >Free SVG Backgrounds and Patterns by SVGBackgrounds.com</a
+      >
+    </div>
   </body>
 </html>
