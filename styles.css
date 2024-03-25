@@ -41,17 +41,16 @@ h1 {
 }
 
 #getWaitlistContainer {
-  width: 100%;
-  max-width: 355px; /* Adjust based on your content's width */
-  position: relative;
-  left: 0px;
-  /* border: 10px solid white; */
-  max-width: 100vw !important;
-  top:60px;
+  width: 100vw!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
 }
 
 .subheader {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 58px !important;
   display: block;
   margin-top: 20px;
